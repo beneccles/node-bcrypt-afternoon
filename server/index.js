@@ -22,6 +22,7 @@ app.get('/auth/logout', authCtrl.logout)
 
 // Treasure
 app.get('/api/treasure/dragon', treasureCtrl.dragonTreasure)
+app.get('/api/treasure/user', treasureCtrl.getUserTreasure)
 
 massive(CONNECTION_STRING).then(db => {
     app.set('db', db)
